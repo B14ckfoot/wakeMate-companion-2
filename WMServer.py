@@ -401,7 +401,7 @@ class WakeMATECompanion:
                     self.connected_clients.append((client_sock, addr))
                     
                     # Show notification
-                    self.show_notification("New Connection", f"Phone at {addr[0]} connected")
+                    self.show_notification("New Connection", f"Client at {addr[0]} connected")
                 
                 except socket.timeout:
                     continue
@@ -417,30 +417,106 @@ class WakeMATECompanion:
             # Clean up if thread exits
             if self.server_socket:
                 self.server_socket.close()
-    
+
     def _handle_client(self, client_sock, addr):
-        """Handle communication with a connected phone"""
+        """Handle communication with a connected client"""
         try:
             # Set a timeout to allow checking server_running flag
             client_sock.settimeout(1.0)
             
+            # Read the HTTP request
+            request_data = b""
             while self.server_running:
                 try:
-                    # Receive data
-                    data = client_sock.recv(1024)
-                    
-                    if not data:
-                        # Client disconnected
+                    chunk = client_sock.recv(1024)
+                    if not chunk:
                         break
                     
-                    # Process command
-                    self._process_command(data.decode('utf-8'), client_sock)
+                    request_data += chunk
+                    
+                    # Look for end of HTTP headers
+                    if b"\r\n\r\n" in request_data:
+                        break
                 
                 except socket.timeout:
                     continue
                 except Exception as e:
                     self.show_notification("Client Error", str(e))
                     break
+            
+            # Process HTTP request
+            if request_data:
+                # Parse request to get the method and path
+                request_lines = request_data.split(b"\r\n")
+                if request_lines and len(request_lines) > 0:
+                    request_line = request_lines[0].decode('utf-8')
+                    parts = request_line.split()
+                    
+                    if len(parts) >= 2:
+                        method = parts[0]
+                        
+                        # Find the Content-Length header
+                        content_length = 0
+                        for line in request_lines:
+                            if b"Content-Length:" in line:
+                                content_length = int(line.split(b":",1)[1].strip())
+                                break
+                        
+                        # If this is a POST request with a body, read the body
+                        body_data = b""
+                        if method == "POST" and content_length > 0:
+                            # Find the body after the headers
+                            headers_end = request_data.find(b"\r\n\r\n")
+                            if headers_end != -1:
+                                body_data = request_data[headers_end + 4:]
+                                
+                                # If we haven't received the entire body yet, keep reading
+                                while len(body_data) < content_length and self.server_running:
+                                    try:
+                                        chunk = client_sock.recv(1024)
+                                        if not chunk:
+                                            break
+                                        body_data += chunk
+                                    except socket.timeout:
+                                        continue
+                                    except Exception as e:
+                                        self.show_notification("Client Error", str(e))
+                                        break
+                        
+                        # Process the command in the body
+                        if body_data:
+                            # Extract the JSON command from the body
+                            try:
+                                command_str = body_data.decode('utf-8')
+                                # Process the command and get the response
+                                self._process_command_with_http_response(command_str, client_sock)
+                            except Exception as e:
+                                # Send HTTP error response
+                                error_response = f"HTTP/1.1 500 Internal Server Error\r\n"
+                                error_response += f"Content-Type: application/json\r\n"
+                                error_response += f"Access-Control-Allow-Origin: *\r\n"
+                                error_response += f"Connection: close\r\n\r\n"
+                                error_response += json.dumps({"status": "error", "message": str(e)})
+                                client_sock.sendall(error_response.encode('utf-8'))
+                        else:
+                            # For OPTIONS requests (CORS preflight)
+                            if method == "OPTIONS":
+                                cors_response = "HTTP/1.1 200 OK\r\n"
+                                cors_response += "Access-Control-Allow-Origin: *\r\n"
+                                cors_response += "Access-Control-Allow-Methods: POST, GET, OPTIONS\r\n"
+                                cors_response += "Access-Control-Allow-Headers: Content-Type\r\n"
+                                cors_response += "Access-Control-Max-Age: 86400\r\n"
+                                cors_response += "Content-Length: 0\r\n"
+                                cors_response += "Connection: close\r\n\r\n"
+                                client_sock.sendall(cors_response.encode('utf-8'))
+                            else:
+                                # Send HTTP 400 Bad Request
+                                bad_request = "HTTP/1.1 400 Bad Request\r\n"
+                                bad_request += "Content-Type: application/json\r\n"
+                                bad_request += "Access-Control-Allow-Origin: *\r\n"
+                                bad_request += "Connection: close\r\n\r\n"
+                                bad_request += json.dumps({"status": "error", "message": "Invalid request"})
+                                client_sock.sendall(bad_request.encode('utf-8'))
         
         finally:
             # Remove client from list and close socket
@@ -448,10 +524,9 @@ class WakeMATECompanion:
                 self.connected_clients.remove((client_sock, addr))
             
             client_sock.close()
-            self.show_notification("Connection Closed", f"Phone at {addr[0]} disconnected")
-    
-    def _process_command(self, command_str, client_sock):
-        """Process a command from the phone app"""
+
+    def _process_command_with_http_response(self, command_str, client_sock):
+        """Process a command and send an HTTP response"""
         try:
             # Parse JSON command
             command = json.loads(command_str)
@@ -460,16 +535,58 @@ class WakeMATECompanion:
             cmd_type = command.get("command", "")
             params = command.get("params", {})
             
-            # Execute command
+            # Execute command - reuse our existing method but capture the result
             result = {"status": "success", "message": "Command executed"}
             
+            # Call our regular command processing logic
+            self._execute_command(cmd_type, params, result)
+            
+            # Send HTTP response
+            response_body = json.dumps(result)
+            http_response = "HTTP/1.1 200 OK\r\n"
+            http_response += "Content-Type: application/json\r\n"
+            http_response += f"Content-Length: {len(response_body)}\r\n"
+            http_response += "Access-Control-Allow-Origin: *\r\n"
+            http_response += "Connection: close\r\n\r\n"
+            http_response += response_body
+            
+            client_sock.sendall(http_response.encode('utf-8'))
+        
+        except json.JSONDecodeError:
+            # Invalid JSON - send HTTP 400 Bad Request
+            error_response = "HTTP/1.1 400 Bad Request\r\n"
+            error_response += "Content-Type: application/json\r\n"
+            error_response += "Access-Control-Allow-Origin: *\r\n"
+            error_response += "Connection: close\r\n\r\n"
+            error_response += json.dumps({"status": "error", "message": "Invalid JSON command"})
+            client_sock.sendall(error_response.encode('utf-8'))
+        
+        except Exception as e:
+            # Other errors - send HTTP 500 Internal Server Error
+            error_response = "HTTP/1.1 500 Internal Server Error\r\n"
+            error_response += "Content-Type: application/json\r\n"
+            error_response += "Access-Control-Allow-Origin: *\r\n"
+            error_response += "Connection: close\r\n\r\n"
+            error_response += json.dumps({"status": "error", "message": str(e)})
+            client_sock.sendall(error_response.encode('utf-8'))
+
+    def _execute_command(self, cmd_type, params, result):
+        """Execute a command and update the result object"""
+        try:
             if cmd_type == "wake":
+                # Extract MAC address from params
+                mac_address = params.get("mac", self.target_mac)
+                if not mac_address:
+                    raise ValueError("No MAC address provided")
+                    
+                # Set target MAC for wake command
+                self.target_mac = mac_address
                 self.wake_computer()
             
             elif cmd_type == "sleep":
                 self.sleep_computer()
             
-            elif cmd_type == "restart":
+            elif cmd_type == "restart" or cmd_type == "reboot":
                 self.restart_computer()
             
             elif cmd_type == "shutdown":
@@ -494,21 +611,62 @@ class WakeMATECompanion:
                 self.volume_mute()
             
             elif cmd_type == "mouse_move":
-                # Move mouse to specified position
-                x = params.get("x", 0)
-                y = params.get("y", 0)
-                pyautogui.moveTo(x, y)
+                # Move mouse to specified position or by delta
+                if "x" in params and "y" in params:
+                    x = params.get("x", 0)
+                    y = params.get("y", 0)
+                    
+                    # Check if values are percentages (0-100)
+                    if isinstance(x, (int, float)) and 0 <= x <= 100 and isinstance(y, (int, float)) and 0 <= y <= 100:
+                        # Convert percentage to screen coordinates
+                        screen_width, screen_height = pyautogui.size()
+                        x = int(screen_width * (x / 100))
+                        y = int(screen_height * (y / 100))
+                        pyautogui.moveTo(x, y)
+                    else:
+                        # Assume these are actual coordinates
+                        pyautogui.moveTo(x, y)
+                
+                # If deltaX/deltaY are provided, move relative to current position
+                elif "deltaX" in params and "deltaY" in params:
+                    deltaX = params.get("deltaX", 0)
+                    deltaY = params.get("deltaY", 0)
+                    pyautogui.moveRel(deltaX, deltaY)
             
             elif cmd_type == "mouse_click":
                 # Perform mouse click
                 button = params.get("button", "left")
-                pyautogui.click(button=button)
+                clicks = 2 if params.get("double", False) else 1
+                pyautogui.click(button=button, clicks=clicks)
+            
+            elif cmd_type == "mouse_scroll":
+                # Scroll up or down
+                direction = params.get("direction", "down")
+                amount = params.get("amount", 5)
+                
+                # Positive values scroll down, negative values scroll up
+                scroll_amount = amount if direction == "down" else -amount
+                pyautogui.scroll(scroll_amount)
             
             elif cmd_type == "key_press":
                 # Press a keyboard key
                 key = params.get("key", "")
                 if key:
-                    pyautogui.press(key)
+                    # Handle special key combinations (e.g., "CTRL+ALT+DELETE")
+                    if "+" in key:
+                        keys = key.split("+")
+                        # Hold all keys except the last one
+                        for k in keys[:-1]:
+                            pyautogui.keyDown(k.lower())
+                        
+                        # Press the last key
+                        pyautogui.press(keys[-1].lower())
+                        
+                        # Release all held keys in reverse order
+                        for k in reversed(keys[:-1]):
+                            pyautogui.keyUp(k.lower())
+                    else:
+                        pyautogui.press(key.lower())
             
             elif cmd_type == "text_input":
                 # Type text
@@ -518,35 +676,69 @@ class WakeMATECompanion:
             
             elif cmd_type == "get_status":
                 # Return status information
-                result = {
-                    "status": "success",
-                    "data": {
-                        "os": self.os_type,
-                        "server_ip": self.server_ip,
-                        "server_port": self.server_port,
-                        "target_ip": self.target_ip,
-                        "target_mac": self.target_mac,
-                        "connected": self.connected
-                    }
+                result["data"] = {
+                    "os": self.os_type,
+                    "server_ip": self.server_ip,
+                    "server_port": self.server_port,
+                    "target_ip": self.target_ip,
+                    "target_mac": self.target_mac,
+                    "connected": self.connected
                 }
+            
+            elif cmd_type == "get_devices":
+                # Return list of saved devices
+                # In a real implementation, this would fetch from a database or config file
+                result["data"] = {
+                    "devices": [
+                        # Return the devices we know about
+                        {
+                            "id": "1", 
+                            "name": "This Computer",
+                            "ip": self.server_ip,
+                            "mac": self.target_mac or "unknown",
+                            "status": "online"
+                        }
+                        # Additional devices would be listed here
+                    ]
+                }
+            
+            elif cmd_type == "add_device":
+                # In a real implementation, this would save to a database or config file
+                name = params.get("name", "")
+                mac = params.get("mac", "")
+                ip = params.get("ip", "")
+                
+                if not name or not mac:
+                    raise ValueError("Device name and MAC address are required")
+                
+                # For demo purposes, we'll just acknowledge the command
+                result["message"] = f"Device '{name}' added successfully"
+                result["data"] = {
+                    "id": str(int(time.time())),  # Generate a timestamp-based ID
+                    "name": name,
+                    "mac": mac,
+                    "ip": ip,
+                    "status": "offline"
+                }
+            
+            elif cmd_type == "remove_device":
+                # In a real implementation, this would remove from a database or config file
+                device_id = params.get("deviceId", "")
+                
+                if not device_id:
+                    raise ValueError("Device ID is required")
+                
+                # For demo purposes, we'll just acknowledge the command
+                result["message"] = f"Device removed successfully"
             
             else:
                 # Unknown command
-                result = {"status": "error", "message": f"Unknown command: {cmd_type}"}
-            
-            # Send response
-            response = json.dumps(result)
-            client_sock.sendall(response.encode('utf-8'))
-        
-        except json.JSONDecodeError:
-            # Invalid JSON
-            response = json.dumps({"status": "error", "message": "Invalid JSON command"})
-            client_sock.sendall(response.encode('utf-8'))
+                result["status"] = "error"
+                result["message"] = f"Unknown command: {cmd_type}"
         
         except Exception as e:
-            # Other errors
-            response = json.dumps({"status": "error", "message": str(e)})
-            client_sock.sendall(response.encode('utf-8'))
+            result["status"] = "error"
+            result["message"] = str(e)
     
     def stop_server(self):
         """Stop the server"""
