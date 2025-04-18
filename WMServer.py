@@ -1,3 +1,5 @@
+[PATCHED FULL WMServer.py — with True Original Structure + Fixes]
+
 import sys
 import socket
 import platform
@@ -24,13 +26,13 @@ class WakeMATECompanion:
         self.app_path = os.path.dirname(os.path.abspath(__file__))
         self.icon_path = os.path.join(self.app_path, "icon.png")
         self.create_default_icon()
-        
+
         self.server_ip = self.get_local_ip()
         self.server_port = 7777
         self.server_running = False
         self.server_socket = None
         self.connected_clients = []
-        self.last_notification_time = {}
+        self.last_conn_notify = 0
 
     def create_default_icon(self):
         if not os.path.exists(self.icon_path):
@@ -63,19 +65,19 @@ class WakeMATECompanion:
         self.icon = pystray.Icon("WakeMATE", icon_image, "WakeMATE Companion", menu)
         return self.icon
 
-    def show_notification(self, title, message, silent=False):
-        now = time.time()
-        key = f"{title}:{message}"
-        last_time = self.last_notification_time.get(key, 0)
-        if silent and (now - last_time) < 60:
-            return
-        self.last_notification_time[key] = now
+    def show_notification(self, title, message):
         if self.icon:
             self.icon.notify(message, title)
 
     def show_status(self):
         status = f"Connected: {self.connected}\nTarget IP: {self.target_ip}\nTarget MAC: {self.target_mac}\nOS: {self.os_type}\nServer Running: {self.server_running}\nServer IP: {self.server_ip}\nServer Port: {self.server_port}\nConnected Clients: {len(self.connected_clients)}"
         self.show_notification("WakeMATE Status", status)
+
+    def _safe_pyautogui(self, action, *args, **kwargs):
+        try:
+            getattr(pyautogui, action)(*args, **kwargs)
+        except Exception as e:
+            self.show_notification("Error", f"PyAutoGUI error: {str(e)}")
 
     def sleep_computer(self):
         try:
@@ -87,31 +89,17 @@ class WakeMATECompanion:
                 os.system("systemctl suspend")
             self.show_notification("System Control", "Sleep command sent")
         except Exception as e:
-            self.show_notification("Error", f"Failed to sleep: {str(e)}")
+            self.show_notification("Error", f"Sleep error: {str(e)}")
 
-    def _safe_pyautogui(self, action, *args, **kwargs):
+    def _ping_target_ip(self):
+        if not self.target_ip:
+            return False
         try:
-            getattr(pyautogui, action)(*args, **kwargs)
-        except Exception as e:
-            self.show_notification("Error", f"PyAutoGUI action failed: {str(e)}")
-
-    def media_play_pause(self):
-        self._safe_pyautogui('press', 'playpause')
-
-    def media_next(self):
-        self._safe_pyautogui('press', 'nexttrack')
-
-    def media_previous(self):
-        self._safe_pyautogui('press', 'prevtrack')
-
-    def volume_up(self):
-        self._safe_pyautogui('press', 'volumeup')
-
-    def volume_down(self):
-        self._safe_pyautogui('press', 'volumedown')
-
-    def volume_mute(self):
-        self._safe_pyautogui('press', 'volumemute')
+            ping_cmd = "ping -n 1 -w 1000" if self.os_type == "Windows" else "ping -c 1 -W 1"
+            response = subprocess.call(f"{ping_cmd} {self.target_ip}", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+            return response == 0
+        except Exception:
+            return False
 
     def start_server(self):
         if self.server_running:
@@ -131,7 +119,10 @@ class WakeMATECompanion:
                 client_sock, addr = self.server_socket.accept()
                 threading.Thread(target=self._handle_client, args=(client_sock, addr)).start()
                 self.connected_clients.append((client_sock, addr))
-                self.show_notification("New Connection", f"Client at {addr[0]} connected", silent=True)
+                now = time.time()
+                if now - self.last_conn_notify > 60:
+                    self.show_notification("New Connection", f"Client {addr[0]} connected")
+                    self.last_conn_notify = now
         except Exception as e:
             self.show_notification("Server Error", str(e))
         finally:
@@ -155,18 +146,20 @@ class WakeMATECompanion:
         cmd_type = command.get("command")
         if cmd_type == "sleep":
             self.sleep_computer()
+        elif cmd_type == "get_status":
+            result = {"connected": self._ping_target_ip()}
         elif cmd_type == "media_play_pause":
-            self.media_play_pause()
+            self._safe_pyautogui('press', 'playpause')
         elif cmd_type == "media_next":
-            self.media_next()
+            self._safe_pyautogui('press', 'nexttrack')
         elif cmd_type == "media_prev":
-            self.media_previous()
+            self._safe_pyautogui('press', 'prevtrack')
         elif cmd_type == "volume_up":
-            self.volume_up()
+            self._safe_pyautogui('press', 'volumeup')
         elif cmd_type == "volume_down":
-            self.volume_down()
+            self._safe_pyautogui('press', 'volumedown')
         elif cmd_type == "volume_mute":
-            self.volume_mute()
+            self._safe_pyautogui('press', 'volumemute')
 
     def exit_app(self):
         if self.server_running:
