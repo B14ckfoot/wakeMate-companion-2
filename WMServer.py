@@ -1,4 +1,3 @@
-[PATCHED FULL WMServer.py — with True Original Structure + Fixes]
 
 import sys
 import socket
