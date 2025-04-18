@@ -57,17 +57,24 @@ class WakeMATECompanion:
         """Create the system tray icon and menu"""
         icon_image = Image.open(self.icon_path)
         
-        menu = (
+        # Create a submenu for Network options
+        network_submenu = pystray.Menu(
+            item('Scan for Devices', self.scan_network),
+            item('Generate QR Code', self.generate_qr_code)
+        )
+        
+        # Create a submenu for Phone Connection options
+        phone_submenu = pystray.Menu(
+            item('Start Server', self.start_server),
+            item('Stop Server', self.stop_server),
+            item('Show Connection Info', self.show_connection_info)
+        )
+        
+        # Create the main menu
+        menu = pystray.Menu(
             item('Status', self.show_status),
-            item('Network', (
-                item('Scan for Devices', self.scan_network),
-                item('Generate QR Code', self.generate_qr_code)
-            )),
-            item('Phone Connection', (
-                item('Start Server', self.start_server),
-                item('Stop Server', self.stop_server),
-                item('Show Connection Info', self.show_connection_info)
-            )),
+            item('Network', network_submenu),
+            item('Phone Connection', phone_submenu),
             item('Exit', self.exit_app)
         )
         
