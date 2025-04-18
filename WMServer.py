@@ -76,6 +76,11 @@ class WakeMATECompanion:
     
     def run(self):
         """Run the application"""
+        # Start the server automatically when the app runs
+        self.start_server()
+        # Show notification that server has started
+        self.show_notification("Auto-Start", f"Server automatically started on {self.server_ip}:{self.server_port}")
+        # Create and run the system tray icon
         icon = self.create_system_tray()
         icon.run()
     
