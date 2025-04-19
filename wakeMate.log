@@ -1,0 +1,39 @@
+2025-04-19 02:57:45,116 - INFO - WakeMATECompanion initializing...
+2025-04-19 02:57:45,117 - INFO - Local IP: 10.0.0.16
+2025-04-19 02:57:45,117 - INFO - Server started on 10.0.0.16:7777
+2025-04-19 02:57:45,118 - INFO - Notification: Server Started - Listening on 10.0.0.16:7777
+2025-04-19 02:57:45,118 - INFO - Server listening on 10.0.0.16:7777
+2025-04-19 02:57:45,118 - INFO - Auto-start monitor started
+2025-04-19 02:57:45,118 - INFO - Auto-start monitor enabled
+2025-04-19 02:57:45,119 - INFO - Notification: Auto-Start Enabled - Will automatically start server when system wakes up
+2025-04-19 02:57:45,258 - INFO - Starting system tray icon
+2025-04-19 02:59:23,247 - INFO - Handling client connection from 10.0.0.16:52025
+2025-04-19 02:59:23,247 - INFO - New connection from 10.0.0.16
+2025-04-19 02:59:23,249 - WARNING - Invalid JSON from 10.0.0.16:52025
+2025-04-19 02:59:23,249 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 02:59:23,254 - INFO - Client 10.0.0.16:52025 disconnected
+2025-04-19 02:59:23,255 - INFO - Connection closed with 10.0.0.16:52025
+2025-04-19 02:59:26,427 - INFO - Handling client connection from 10.0.0.16:52026
+2025-04-19 02:59:26,427 - INFO - New connection from 10.0.0.16
+2025-04-19 02:59:26,427 - WARNING - Invalid JSON from 10.0.0.16:52026
+2025-04-19 02:59:26,428 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 02:59:26,432 - INFO - Client 10.0.0.16:52026 disconnected
+2025-04-19 02:59:26,432 - INFO - Connection closed with 10.0.0.16:52026
+2025-04-19 02:59:26,909 - INFO - Handling client connection from 10.0.0.16:52027
+2025-04-19 02:59:26,910 - WARNING - Invalid JSON from 10.0.0.16:52027
+2025-04-19 02:59:26,910 - INFO - New connection from 10.0.0.16
+2025-04-19 02:59:26,911 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 02:59:26,915 - INFO - Client 10.0.0.16:52027 disconnected
+2025-04-19 02:59:26,916 - INFO - Connection closed with 10.0.0.16:52027
+2025-04-19 02:59:27,158 - INFO - Handling client connection from 10.0.0.16:52028
+2025-04-19 02:59:27,159 - WARNING - Invalid JSON from 10.0.0.16:52028
+2025-04-19 02:59:27,159 - INFO - New connection from 10.0.0.16
+2025-04-19 02:59:27,159 - INFO - Client 10.0.0.16:52028 disconnected
+2025-04-19 02:59:27,160 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 02:59:27,160 - INFO - Connection closed with 10.0.0.16:52028
+2025-04-19 02:59:36,432 - INFO - Handling client connection from 10.0.0.16:52054
+2025-04-19 02:59:36,432 - INFO - New connection from 10.0.0.16
+2025-04-19 02:59:36,433 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 02:59:36,434 - WARNING - Invalid JSON from 10.0.0.16:52054
+2025-04-19 02:59:36,437 - INFO - Client 10.0.0.16:52054 disconnected
+2025-04-19 02:59:36,438 - INFO - Connection closed with 10.0.0.16:52054
