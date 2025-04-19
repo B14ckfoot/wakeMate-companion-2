@@ -455,6 +455,16 @@ class WakeMATECompanion:
                     if len(parts) >= 2:
                         method = parts[0]
                         
+                        # --- HERE: check if it's /status ---
+                        if method == "GET" and parts[1] == "/status":
+                            status_response = "HTTP/1.1 200 OK\r\n"
+                            status_response += "Content-Type: application/json\r\n"
+                            status_response += "Access-Control-Allow-Origin: *\r\n"
+                            status_response += "Connection: close\r\n\r\n"
+                            status_response += json.dumps({"status": "online"})
+                            client_sock.sendall(status_response.encode('utf-8'))
+                            return
+                        
                         # Find the Content-Length header
                         content_length = 0
                         for line in request_lines:
