@@ -214,93 +214,53 @@ class WakeMATECompanion:
             self.show_notification("Error", f"Failed to start server: {str(e)}")
     
     def _run_server(self):
-        """Server thread function"""
-        try:
-            # Create socket
-            self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            self.server_socket.bind((self.server_ip, self.server_port))
-            self.server_socket.listen(5)
-            self.server_socket.settimeout(1.0)  # Add timeout for accepting connections
-            
-            self.logger.info(f"Server listening on {self.server_ip}:{self.server_port}")
-            
-            while self.server_running:
-                try:
-                    # Accept connection
-                    client_sock, addr = self.server_socket.accept()
-                    
-                    # Handle client in a new thread
-                    client_thread = threading.Thread(
-                        target=self._handle_client,
-                        args=(client_sock, addr)
-                    )
-                    client_thread.daemon = True
-                    client_thread.start()
-                    
-                    # Add to clients list
-                    self.connected_clients.append((client_sock, addr))
-                    
-                    # Log connection
-                    self.logger.info(f"New connection from {addr[0]}")
-                    self.show_notification("New Connection", f"Device at {addr[0]} connected")
+    """Server thread function with HTTP support"""
+    try:
+        # Create socket
+        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.server_socket.bind((self.server_ip, self.server_port))
+        self.server_socket.listen(5)
+        self.server_socket.settimeout(1.0)  # Add timeout for accepting connections
+        
+        self.logger.info(f"Server listening on {self.server_ip}:{self.server_port}")
+        
+        while self.server_running:
+            try:
+                # Accept connection
+                client_sock, addr = self.server_socket.accept()
                 
-                except socket.timeout:
-                    continue  # Timeout allows checking server_running flag
-                except Exception as e:
-                    if self.server_running:  # Only show errors if server should be running
-                        self.logger.error(f"Server error: {str(e)}")
-                    break
-        
-        except Exception as e:
-            self.logger.error(f"Server error: {str(e)}")
-        
-        finally:
-            # Clean up if thread exits
-            if self.server_socket:
-                self.server_socket.close()
-                self.server_socket = None
-            self.logger.info("Server stopped")
+                # Handle client in a new thread
+                client_thread = threading.Thread(
+                    target=self._handle_client_http,  # Use HTTP handler
+                    args=(client_sock, addr)
+                )
+                client_thread.daemon = True
+                client_thread.start()
+                
+                # Add to clients list
+                self.connected_clients.append((client_sock, addr))
+                
+                # Log connection
+                self.logger.info(f"New connection from {addr[0]}")
+                self.show_notification("New Connection", f"Device at {addr[0]} connected")
+                
+            except socket.timeout:
+                continue  # Timeout allows checking server_running flag
+            except Exception as e:
+                if self.server_running:  # Only show errors if server should be running
+                    self.logger.error(f"Server error: {str(e)}")
+                break
     
-    def _handle_client(self, client_sock, addr):
-        """Handle communication with a connected client"""
-        client_addr = f"{addr[0]}:{addr[1]}"
-        self.logger.info(f"Handling client connection from {client_addr}")
-        
-        try:
-            # Set a timeout to allow checking server_running flag
-            client_sock.settimeout(1.0)
-            
-            while self.server_running:
-                try:
-                    # Receive data
-                    data = client_sock.recv(1024)
-                    
-                    if not data:
-                        # Client disconnected
-                        self.logger.info(f"Client {client_addr} disconnected")
-                        break
-                    
-                    # Process command
-                    self._process_command(data.decode('utf-8'), client_sock, client_addr)
-                
-                except socket.timeout:
-                    continue
-                except json.JSONDecodeError as e:
-                    self.logger.warning(f"Invalid JSON from {client_addr}: {str(e)}")
-                    response = {"status": "error", "message": "Invalid JSON format"}
-                    client_sock.sendall(json.dumps(response).encode('utf-8'))
-                except Exception as e:
-                    self.logger.error(f"Error handling client {client_addr}: {str(e)}")
-                    break
-        
-        finally:
-            # Remove client from list and close socket
-            if (client_sock, addr) in self.connected_clients:
-                self.connected_clients.remove((client_sock, addr))
-            
-            client_sock.close()
-            self.logger.info(f"Connection closed with {client_addr}")
+    except Exception as e:
+        self.logger.error(f"Server error: {str(e)}")
+    
+    finally:
+        # Clean up if thread exits
+        if self.server_socket:
+            self.server_socket.close()
+            self.server_socket = None
+        self.logger.info("Server stopped")
     
     def _process_command(self, command_str, client_sock, client_addr):
         """Process a command from the client"""
