@@ -37,3 +37,661 @@
 2025-04-19 02:59:36,434 - WARNING - Invalid JSON from 10.0.0.16:52054
 2025-04-19 02:59:36,437 - INFO - Client 10.0.0.16:52054 disconnected
 2025-04-19 02:59:36,438 - INFO - Connection closed with 10.0.0.16:52054
+2025-04-19 03:32:41,569 - INFO - WakeMATECompanion initializing...
+2025-04-19 03:32:41,570 - INFO - Local IP: 10.0.0.16
+2025-04-19 03:32:41,570 - ERROR - Failed to start server: 'WakeMATECompanion' object has no attribute '_run_server'
+2025-04-19 03:32:41,570 - INFO - Notification: Error - Failed to start server: 'WakeMATECompanion' object has no attribute '_run_server'
+2025-04-19 03:32:41,571 - ERROR - Failed to run application: 'WakeMATECompanion' object has no attribute 'enable_auto_start'
+2025-04-19 04:03:55,956 - INFO - WakeMATECompanion initializing...
+2025-04-19 04:03:55,957 - INFO - Local IP: 10.0.0.16
+2025-04-19 04:03:55,957 - INFO - Server started on 10.0.0.16:7777
+2025-04-19 04:03:55,957 - INFO - Server listening on 10.0.0.16:7777
+2025-04-19 04:03:55,978 - INFO - Created default icon at /Users/soundmanipulator/WakeMATE Project/wakeMate-companion-2/resources/icon.png
+2025-04-19 04:03:56,088 - INFO - Starting system tray icon
+2025-04-19 04:04:07,561 - INFO - Server stopped
+2025-04-19 04:04:07,561 - INFO - Notification: Server Stopped - Server has been stopped
+2025-04-19 04:04:07,967 - INFO - Server stopped
+2025-04-19 04:04:11,234 - INFO - Server started on 10.0.0.16:7777
+2025-04-19 04:04:11,234 - INFO - Notification: Server Started - Listening on 10.0.0.16:7777
+2025-04-19 04:04:11,234 - INFO - Server listening on 10.0.0.16:7777
+2025-04-19 04:04:28,158 - INFO - Handling client connection from 10.0.0.16:52243
+2025-04-19 04:04:28,158 - INFO - New connection from 10.0.0.16
+2025-04-19 04:04:28,158 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:04:28,158 - WARNING - Invalid JSON from 10.0.0.16:52243
+2025-04-19 04:04:28,162 - INFO - Client 10.0.0.16:52243 disconnected
+2025-04-19 04:04:28,164 - INFO - Connection closed with 10.0.0.16:52243
+2025-04-19 04:04:33,623 - INFO - Handling client connection from 10.0.0.16:52265
+2025-04-19 04:04:33,624 - WARNING - Invalid JSON from 10.0.0.16:52265
+2025-04-19 04:04:33,624 - INFO - New connection from 10.0.0.16
+2025-04-19 04:04:33,624 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:04:33,624 - INFO - Client 10.0.0.16:52265 disconnected
+2025-04-19 04:04:33,628 - INFO - Connection closed with 10.0.0.16:52265
+2025-04-19 04:04:36,865 - INFO - Handling client connection from 10.0.0.16:52282
+2025-04-19 04:04:36,865 - INFO - New connection from 10.0.0.16
+2025-04-19 04:04:36,866 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:04:36,866 - WARNING - Invalid JSON from 10.0.0.16:52282
+2025-04-19 04:04:36,870 - INFO - Client 10.0.0.16:52282 disconnected
+2025-04-19 04:04:36,871 - INFO - Connection closed with 10.0.0.16:52282
+2025-04-19 04:04:39,134 - INFO - Handling client connection from 10.0.0.16:52291
+2025-04-19 04:04:39,134 - INFO - New connection from 10.0.0.16
+2025-04-19 04:04:39,134 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:04:39,134 - WARNING - Invalid JSON from 10.0.0.16:52291
+2025-04-19 04:04:39,138 - INFO - Client 10.0.0.16:52291 disconnected
+2025-04-19 04:04:39,139 - INFO - Connection closed with 10.0.0.16:52291
+2025-04-19 04:29:46,239 - INFO - Handling client connection from 10.0.0.16:58707
+2025-04-19 04:29:46,239 - INFO - New connection from 10.0.0.16
+2025-04-19 04:29:46,240 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:29:46,240 - WARNING - Invalid JSON from 10.0.0.16:58707
+2025-04-19 04:29:46,245 - INFO - Client 10.0.0.16:58707 disconnected
+2025-04-19 04:29:46,245 - INFO - Connection closed with 10.0.0.16:58707
+2025-04-19 04:29:50,918 - INFO - Handling client connection from 10.0.0.16:58728
+2025-04-19 04:29:50,918 - INFO - New connection from 10.0.0.16
+2025-04-19 04:29:50,919 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:29:50,919 - WARNING - Invalid JSON from 10.0.0.16:58728
+2025-04-19 04:29:50,924 - INFO - Client 10.0.0.16:58728 disconnected
+2025-04-19 04:29:50,925 - INFO - Connection closed with 10.0.0.16:58728
+2025-04-19 04:29:51,163 - INFO - Handling client connection from 10.0.0.16:58729
+2025-04-19 04:29:51,163 - INFO - New connection from 10.0.0.16
+2025-04-19 04:29:51,164 - WARNING - Invalid JSON from 10.0.0.16:58729
+2025-04-19 04:29:51,164 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:29:51,169 - INFO - Client 10.0.0.16:58729 disconnected
+2025-04-19 04:29:51,170 - INFO - Connection closed with 10.0.0.16:58729
+2025-04-19 04:29:59,588 - INFO - Server stopped
+2025-04-19 04:29:59,588 - INFO - Notification: Server Stopped - Server has been stopped
+2025-04-19 04:30:00,409 - INFO - Server stopped
+2025-04-19 04:30:02,718 - INFO - Server started on 10.0.0.16:7777
+2025-04-19 04:30:02,719 - INFO - Notification: Server Started - Listening on 10.0.0.16:7777
+2025-04-19 04:30:02,723 - INFO - Server listening on 10.0.0.16:7777
+2025-04-19 04:30:22,781 - INFO - Handling client connection from 10.0.0.16:58876
+2025-04-19 04:30:22,781 - INFO - New connection from 10.0.0.16
+2025-04-19 04:30:22,782 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:30:22,782 - WARNING - Invalid JSON from 10.0.0.16:58876
+2025-04-19 04:30:22,786 - INFO - Client 10.0.0.16:58876 disconnected
+2025-04-19 04:30:22,787 - INFO - Connection closed with 10.0.0.16:58876
+2025-04-19 04:30:23,027 - INFO - Handling client connection from 10.0.0.16:58877
+2025-04-19 04:30:23,027 - INFO - New connection from 10.0.0.16
+2025-04-19 04:30:23,028 - WARNING - Invalid JSON from 10.0.0.16:58877
+2025-04-19 04:30:23,028 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:30:23,032 - INFO - Client 10.0.0.16:58877 disconnected
+2025-04-19 04:30:23,033 - INFO - Connection closed with 10.0.0.16:58877
+2025-04-19 04:30:32,783 - INFO - Handling client connection from 10.0.0.16:58919
+2025-04-19 04:30:32,783 - INFO - New connection from 10.0.0.16
+2025-04-19 04:30:32,783 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:30:32,784 - WARNING - Invalid JSON from 10.0.0.16:58919
+2025-04-19 04:30:32,788 - INFO - Client 10.0.0.16:58919 disconnected
+2025-04-19 04:30:32,789 - INFO - Connection closed with 10.0.0.16:58919
+2025-04-19 04:30:42,783 - INFO - Handling client connection from 10.0.0.16:58960
+2025-04-19 04:30:42,783 - WARNING - Invalid JSON from 10.0.0.16:58960
+2025-04-19 04:30:42,784 - INFO - New connection from 10.0.0.16
+2025-04-19 04:30:42,784 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:30:42,784 - INFO - Client 10.0.0.16:58960 disconnected
+2025-04-19 04:30:42,788 - INFO - Connection closed with 10.0.0.16:58960
+2025-04-19 04:30:46,240 - INFO - Handling client connection from 10.0.0.16:58977
+2025-04-19 04:30:46,240 - INFO - New connection from 10.0.0.16
+2025-04-19 04:30:46,240 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:30:46,240 - WARNING - Invalid JSON from 10.0.0.16:58977
+2025-04-19 04:30:46,244 - INFO - Client 10.0.0.16:58977 disconnected
+2025-04-19 04:30:46,245 - INFO - Connection closed with 10.0.0.16:58977
+2025-04-19 04:30:52,784 - INFO - Handling client connection from 10.0.0.16:59003
+2025-04-19 04:30:52,784 - WARNING - Invalid JSON from 10.0.0.16:59003
+2025-04-19 04:30:52,784 - INFO - New connection from 10.0.0.16
+2025-04-19 04:30:52,784 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:30:52,788 - INFO - Client 10.0.0.16:59003 disconnected
+2025-04-19 04:30:52,789 - INFO - Connection closed with 10.0.0.16:59003
+2025-04-19 04:31:02,784 - INFO - Handling client connection from 10.0.0.16:59044
+2025-04-19 04:31:02,784 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:02,784 - WARNING - Invalid JSON from 10.0.0.16:59044
+2025-04-19 04:31:02,785 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:02,789 - INFO - Client 10.0.0.16:59044 disconnected
+2025-04-19 04:31:02,789 - INFO - Connection closed with 10.0.0.16:59044
+2025-04-19 04:31:12,783 - INFO - Handling client connection from 10.0.0.16:59085
+2025-04-19 04:31:12,783 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:12,783 - WARNING - Invalid JSON from 10.0.0.16:59085
+2025-04-19 04:31:12,784 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:12,791 - INFO - Client 10.0.0.16:59085 disconnected
+2025-04-19 04:31:12,792 - INFO - Connection closed with 10.0.0.16:59085
+2025-04-19 04:31:22,785 - INFO - Handling client connection from 10.0.0.16:59126
+2025-04-19 04:31:22,785 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:22,786 - WARNING - Invalid JSON from 10.0.0.16:59126
+2025-04-19 04:31:22,786 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:22,790 - INFO - Client 10.0.0.16:59126 disconnected
+2025-04-19 04:31:22,790 - INFO - Connection closed with 10.0.0.16:59126
+2025-04-19 04:31:32,785 - INFO - Handling client connection from 10.0.0.16:59168
+2025-04-19 04:31:32,786 - WARNING - Invalid JSON from 10.0.0.16:59168
+2025-04-19 04:31:32,786 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:32,786 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:32,790 - INFO - Client 10.0.0.16:59168 disconnected
+2025-04-19 04:31:32,792 - INFO - Connection closed with 10.0.0.16:59168
+2025-04-19 04:31:42,785 - INFO - Handling client connection from 10.0.0.16:59211
+2025-04-19 04:31:42,785 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:42,785 - WARNING - Invalid JSON from 10.0.0.16:59211
+2025-04-19 04:31:42,786 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:42,790 - INFO - Client 10.0.0.16:59211 disconnected
+2025-04-19 04:31:42,792 - INFO - Connection closed with 10.0.0.16:59211
+2025-04-19 04:31:46,241 - INFO - Handling client connection from 10.0.0.16:59224
+2025-04-19 04:31:46,241 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:46,241 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:46,241 - WARNING - Invalid JSON from 10.0.0.16:59224
+2025-04-19 04:31:46,247 - INFO - Client 10.0.0.16:59224 disconnected
+2025-04-19 04:31:46,248 - INFO - Connection closed with 10.0.0.16:59224
+2025-04-19 04:31:52,785 - INFO - Handling client connection from 10.0.0.16:59253
+2025-04-19 04:31:52,786 - INFO - New connection from 10.0.0.16
+2025-04-19 04:31:52,786 - WARNING - Invalid JSON from 10.0.0.16:59253
+2025-04-19 04:31:52,786 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:31:52,790 - INFO - Client 10.0.0.16:59253 disconnected
+2025-04-19 04:31:52,792 - INFO - Connection closed with 10.0.0.16:59253
+2025-04-19 04:32:02,786 - INFO - Handling client connection from 10.0.0.16:59296
+2025-04-19 04:32:02,786 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:02,786 - WARNING - Invalid JSON from 10.0.0.16:59296
+2025-04-19 04:32:02,787 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:02,791 - INFO - Client 10.0.0.16:59296 disconnected
+2025-04-19 04:32:02,792 - INFO - Connection closed with 10.0.0.16:59296
+2025-04-19 04:32:12,785 - INFO - Handling client connection from 10.0.0.16:59337
+2025-04-19 04:32:12,785 - WARNING - Invalid JSON from 10.0.0.16:59337
+2025-04-19 04:32:12,785 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:12,786 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:12,790 - INFO - Client 10.0.0.16:59337 disconnected
+2025-04-19 04:32:12,791 - INFO - Connection closed with 10.0.0.16:59337
+2025-04-19 04:32:22,786 - INFO - Handling client connection from 10.0.0.16:59378
+2025-04-19 04:32:22,786 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:22,787 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:22,790 - WARNING - Invalid JSON from 10.0.0.16:59378
+2025-04-19 04:32:22,792 - INFO - Client 10.0.0.16:59378 disconnected
+2025-04-19 04:32:22,794 - INFO - Connection closed with 10.0.0.16:59378
+2025-04-19 04:32:32,785 - INFO - Handling client connection from 10.0.0.16:59421
+2025-04-19 04:32:32,785 - WARNING - Invalid JSON from 10.0.0.16:59421
+2025-04-19 04:32:32,786 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:32,786 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:32,786 - INFO - Client 10.0.0.16:59421 disconnected
+2025-04-19 04:32:32,792 - INFO - Connection closed with 10.0.0.16:59421
+2025-04-19 04:32:42,340 - INFO - Handling client connection from 10.0.0.16:59458
+2025-04-19 04:32:42,340 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:42,341 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:42,345 - WARNING - Invalid JSON from 10.0.0.16:59458
+2025-04-19 04:32:42,347 - INFO - Client 10.0.0.16:59458 disconnected
+2025-04-19 04:32:42,348 - INFO - Connection closed with 10.0.0.16:59458
+2025-04-19 04:32:42,581 - INFO - Handling client connection from 10.0.0.16:59459
+2025-04-19 04:32:42,581 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:42,582 - WARNING - Invalid JSON from 10.0.0.16:59459
+2025-04-19 04:32:42,582 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:42,583 - INFO - Client 10.0.0.16:59459 disconnected
+2025-04-19 04:32:42,587 - INFO - Connection closed with 10.0.0.16:59459
+2025-04-19 04:32:46,242 - INFO - Handling client connection from 10.0.0.16:59476
+2025-04-19 04:32:46,243 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:46,243 - WARNING - Invalid JSON from 10.0.0.16:59476
+2025-04-19 04:32:46,243 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:46,247 - INFO - Client 10.0.0.16:59476 disconnected
+2025-04-19 04:32:46,248 - INFO - Connection closed with 10.0.0.16:59476
+2025-04-19 04:32:52,343 - INFO - Handling client connection from 10.0.0.16:59501
+2025-04-19 04:32:52,343 - INFO - New connection from 10.0.0.16
+2025-04-19 04:32:52,344 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:32:52,344 - WARNING - Invalid JSON from 10.0.0.16:59501
+2025-04-19 04:32:52,351 - INFO - Client 10.0.0.16:59501 disconnected
+2025-04-19 04:32:52,352 - INFO - Connection closed with 10.0.0.16:59501
+2025-04-19 04:33:02,342 - INFO - Handling client connection from 10.0.0.16:59542
+2025-04-19 04:33:02,342 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:02,343 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:02,343 - WARNING - Invalid JSON from 10.0.0.16:59542
+2025-04-19 04:33:02,347 - INFO - Client 10.0.0.16:59542 disconnected
+2025-04-19 04:33:02,350 - INFO - Connection closed with 10.0.0.16:59542
+2025-04-19 04:33:12,344 - INFO - Handling client connection from 10.0.0.16:59585
+2025-04-19 04:33:12,344 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:12,345 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:12,345 - WARNING - Invalid JSON from 10.0.0.16:59585
+2025-04-19 04:33:12,349 - INFO - Client 10.0.0.16:59585 disconnected
+2025-04-19 04:33:12,350 - INFO - Connection closed with 10.0.0.16:59585
+2025-04-19 04:33:22,344 - INFO - Handling client connection from 10.0.0.16:59626
+2025-04-19 04:33:22,344 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:22,344 - WARNING - Invalid JSON from 10.0.0.16:59626
+2025-04-19 04:33:22,344 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:22,348 - INFO - Client 10.0.0.16:59626 disconnected
+2025-04-19 04:33:22,351 - INFO - Connection closed with 10.0.0.16:59626
+2025-04-19 04:33:32,343 - INFO - Handling client connection from 10.0.0.16:59670
+2025-04-19 04:33:32,343 - WARNING - Invalid JSON from 10.0.0.16:59670
+2025-04-19 04:33:32,343 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:32,343 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:32,347 - INFO - Client 10.0.0.16:59670 disconnected
+2025-04-19 04:33:32,348 - INFO - Connection closed with 10.0.0.16:59670
+2025-04-19 04:33:42,987 - INFO - Handling client connection from 10.0.0.16:59718
+2025-04-19 04:33:42,987 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:42,987 - WARNING - Invalid JSON from 10.0.0.16:59718
+2025-04-19 04:33:42,988 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:42,988 - INFO - Client 10.0.0.16:59718 disconnected
+2025-04-19 04:33:42,992 - INFO - Connection closed with 10.0.0.16:59718
+2025-04-19 04:33:46,988 - INFO - Handling client connection from 10.0.0.16:59735
+2025-04-19 04:33:46,988 - WARNING - Invalid JSON from 10.0.0.16:59735
+2025-04-19 04:33:46,988 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:46,988 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:46,988 - INFO - Client 10.0.0.16:59735 disconnected
+2025-04-19 04:33:46,992 - INFO - Connection closed with 10.0.0.16:59735
+2025-04-19 04:33:52,988 - INFO - Handling client connection from 10.0.0.16:59760
+2025-04-19 04:33:52,988 - INFO - New connection from 10.0.0.16
+2025-04-19 04:33:52,989 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:33:52,989 - WARNING - Invalid JSON from 10.0.0.16:59760
+2025-04-19 04:33:52,993 - INFO - Client 10.0.0.16:59760 disconnected
+2025-04-19 04:33:52,994 - INFO - Connection closed with 10.0.0.16:59760
+2025-04-19 04:34:02,992 - INFO - Handling client connection from 10.0.0.16:59799
+2025-04-19 04:34:02,993 - INFO - New connection from 10.0.0.16
+2025-04-19 04:34:02,998 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:34:02,999 - WARNING - Invalid JSON from 10.0.0.16:59799
+2025-04-19 04:34:03,007 - INFO - Client 10.0.0.16:59799 disconnected
+2025-04-19 04:34:03,008 - INFO - Connection closed with 10.0.0.16:59799
+2025-04-19 04:34:12,988 - INFO - Handling client connection from 10.0.0.16:59840
+2025-04-19 04:34:12,988 - INFO - New connection from 10.0.0.16
+2025-04-19 04:34:12,989 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:34:12,994 - WARNING - Invalid JSON from 10.0.0.16:59840
+2025-04-19 04:34:12,996 - INFO - Client 10.0.0.16:59840 disconnected
+2025-04-19 04:34:12,997 - INFO - Connection closed with 10.0.0.16:59840
+2025-04-19 04:34:22,988 - INFO - Handling client connection from 10.0.0.16:59881
+2025-04-19 04:34:22,989 - WARNING - Invalid JSON from 10.0.0.16:59881
+2025-04-19 04:34:22,989 - INFO - New connection from 10.0.0.16
+2025-04-19 04:34:22,989 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:34:22,993 - INFO - Client 10.0.0.16:59881 disconnected
+2025-04-19 04:34:22,994 - INFO - Connection closed with 10.0.0.16:59881
+2025-04-19 04:34:32,989 - INFO - Handling client connection from 10.0.0.16:59923
+2025-04-19 04:34:32,990 - INFO - New connection from 10.0.0.16
+2025-04-19 04:34:32,990 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:34:32,994 - WARNING - Invalid JSON from 10.0.0.16:59923
+2025-04-19 04:34:32,995 - INFO - Client 10.0.0.16:59923 disconnected
+2025-04-19 04:34:32,997 - INFO - Connection closed with 10.0.0.16:59923
+2025-04-19 04:34:54,992 - INFO - Handling client connection from 10.0.0.16:60012
+2025-04-19 04:34:54,992 - INFO - New connection from 10.0.0.16
+2025-04-19 04:34:54,992 - WARNING - Invalid JSON from 10.0.0.16:60012
+2025-04-19 04:34:54,993 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:34:54,997 - INFO - Client 10.0.0.16:60012 disconnected
+2025-04-19 04:34:54,998 - INFO - Connection closed with 10.0.0.16:60012
+2025-04-19 04:34:55,256 - INFO - Handling client connection from 10.0.0.16:60013
+2025-04-19 04:34:55,256 - WARNING - Invalid JSON from 10.0.0.16:60013
+2025-04-19 04:34:55,256 - INFO - New connection from 10.0.0.16
+2025-04-19 04:34:55,257 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:34:55,257 - INFO - Client 10.0.0.16:60013 disconnected
+2025-04-19 04:34:55,262 - INFO - Connection closed with 10.0.0.16:60013
+2025-04-19 04:35:54,993 - INFO - Handling client connection from 10.0.0.16:60287
+2025-04-19 04:35:54,993 - INFO - New connection from 10.0.0.16
+2025-04-19 04:35:54,994 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:35:54,994 - WARNING - Invalid JSON from 10.0.0.16:60287
+2025-04-19 04:35:55,001 - INFO - Client 10.0.0.16:60287 disconnected
+2025-04-19 04:35:55,002 - INFO - Connection closed with 10.0.0.16:60287
+2025-04-19 04:35:55,304 - INFO - Handling client connection from 10.0.0.16:60288
+2025-04-19 04:35:55,304 - INFO - New connection from 10.0.0.16
+2025-04-19 04:35:55,305 - WARNING - Invalid JSON from 10.0.0.16:60288
+2025-04-19 04:35:55,305 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:35:55,311 - INFO - Client 10.0.0.16:60288 disconnected
+2025-04-19 04:35:55,313 - INFO - Connection closed with 10.0.0.16:60288
+2025-04-19 04:36:54,995 - INFO - Handling client connection from 10.0.0.16:60530
+2025-04-19 04:36:54,995 - INFO - New connection from 10.0.0.16
+2025-04-19 04:36:54,995 - WARNING - Invalid JSON from 10.0.0.16:60530
+2025-04-19 04:36:54,995 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:36:54,996 - INFO - Client 10.0.0.16:60530 disconnected
+2025-04-19 04:36:55,003 - INFO - Connection closed with 10.0.0.16:60530
+2025-04-19 04:36:55,260 - INFO - Handling client connection from 10.0.0.16:60531
+2025-04-19 04:36:55,260 - INFO - New connection from 10.0.0.16
+2025-04-19 04:36:55,261 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:36:55,261 - WARNING - Invalid JSON from 10.0.0.16:60531
+2025-04-19 04:36:55,266 - INFO - Client 10.0.0.16:60531 disconnected
+2025-04-19 04:36:55,268 - INFO - Connection closed with 10.0.0.16:60531
+2025-04-19 04:37:54,994 - INFO - Handling client connection from 10.0.0.16:60772
+2025-04-19 04:37:54,994 - INFO - New connection from 10.0.0.16
+2025-04-19 04:37:54,994 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:37:54,998 - WARNING - Invalid JSON from 10.0.0.16:60772
+2025-04-19 04:37:54,998 - INFO - Client 10.0.0.16:60772 disconnected
+2025-04-19 04:37:55,000 - INFO - Connection closed with 10.0.0.16:60772
+2025-04-19 04:37:55,269 - INFO - Handling client connection from 10.0.0.16:60773
+2025-04-19 04:37:55,269 - INFO - New connection from 10.0.0.16
+2025-04-19 04:37:55,270 - WARNING - Invalid JSON from 10.0.0.16:60773
+2025-04-19 04:37:55,270 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:37:55,275 - INFO - Client 10.0.0.16:60773 disconnected
+2025-04-19 04:37:55,276 - INFO - Connection closed with 10.0.0.16:60773
+2025-04-19 04:38:54,995 - INFO - Handling client connection from 10.0.0.16:61076
+2025-04-19 04:38:54,995 - INFO - New connection from 10.0.0.16
+2025-04-19 04:38:54,995 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:38:54,998 - WARNING - Invalid JSON from 10.0.0.16:61076
+2025-04-19 04:38:54,999 - INFO - Client 10.0.0.16:61076 disconnected
+2025-04-19 04:38:55,000 - INFO - Connection closed with 10.0.0.16:61076
+2025-04-19 04:38:55,274 - INFO - Handling client connection from 10.0.0.16:61077
+2025-04-19 04:38:55,274 - INFO - New connection from 10.0.0.16
+2025-04-19 04:38:55,275 - WARNING - Invalid JSON from 10.0.0.16:61077
+2025-04-19 04:38:55,275 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:38:55,280 - INFO - Client 10.0.0.16:61077 disconnected
+2025-04-19 04:38:55,282 - INFO - Connection closed with 10.0.0.16:61077
+2025-04-19 04:39:54,997 - INFO - Handling client connection from 10.0.0.16:61322
+2025-04-19 04:39:54,997 - INFO - New connection from 10.0.0.16
+2025-04-19 04:39:54,998 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:39:54,998 - WARNING - Invalid JSON from 10.0.0.16:61322
+2025-04-19 04:39:55,003 - INFO - Client 10.0.0.16:61322 disconnected
+2025-04-19 04:39:55,004 - INFO - Connection closed with 10.0.0.16:61322
+2025-04-19 04:39:55,267 - INFO - Handling client connection from 10.0.0.16:61323
+2025-04-19 04:39:55,267 - INFO - New connection from 10.0.0.16
+2025-04-19 04:39:55,268 - WARNING - Invalid JSON from 10.0.0.16:61323
+2025-04-19 04:39:55,268 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:39:55,273 - INFO - Client 10.0.0.16:61323 disconnected
+2025-04-19 04:39:55,275 - INFO - Connection closed with 10.0.0.16:61323
+2025-04-19 04:40:37,129 - INFO - Handling client connection from 10.0.0.16:61499
+2025-04-19 04:40:37,129 - INFO - New connection from 10.0.0.16
+2025-04-19 04:40:37,130 - WARNING - Invalid JSON from 10.0.0.16:61499
+2025-04-19 04:40:37,130 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:40:37,136 - INFO - Client 10.0.0.16:61499 disconnected
+2025-04-19 04:40:37,139 - INFO - Connection closed with 10.0.0.16:61499
+2025-04-19 04:49:20,398 - INFO - Handling client connection from 10.0.0.16:63761
+2025-04-19 04:49:20,399 - INFO - New connection from 10.0.0.16
+2025-04-19 04:49:20,399 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:49:20,400 - WARNING - Invalid JSON from 10.0.0.16:63761
+2025-04-19 04:49:20,404 - INFO - Client 10.0.0.16:63761 disconnected
+2025-04-19 04:49:20,404 - INFO - Connection closed with 10.0.0.16:63761
+2025-04-19 04:50:21,007 - INFO - Handling client connection from 10.0.0.16:64027
+2025-04-19 04:50:21,008 - INFO - New connection from 10.0.0.16
+2025-04-19 04:50:21,008 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:50:21,008 - WARNING - Invalid JSON from 10.0.0.16:64027
+2025-04-19 04:50:21,013 - INFO - Client 10.0.0.16:64027 disconnected
+2025-04-19 04:50:21,015 - INFO - Connection closed with 10.0.0.16:64027
+2025-04-19 04:51:21,007 - INFO - Handling client connection from 10.0.0.16:64271
+2025-04-19 04:51:21,008 - INFO - New connection from 10.0.0.16
+2025-04-19 04:51:21,008 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:51:21,012 - WARNING - Invalid JSON from 10.0.0.16:64271
+2025-04-19 04:51:21,013 - INFO - Client 10.0.0.16:64271 disconnected
+2025-04-19 04:51:21,014 - INFO - Connection closed with 10.0.0.16:64271
+2025-04-19 04:52:21,010 - INFO - Handling client connection from 10.0.0.16:64515
+2025-04-19 04:52:21,010 - INFO - New connection from 10.0.0.16
+2025-04-19 04:52:21,011 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:52:21,011 - WARNING - Invalid JSON from 10.0.0.16:64515
+2025-04-19 04:52:21,016 - INFO - Client 10.0.0.16:64515 disconnected
+2025-04-19 04:52:21,017 - INFO - Connection closed with 10.0.0.16:64515
+2025-04-19 04:53:21,011 - INFO - Handling client connection from 10.0.0.16:64758
+2025-04-19 04:53:21,011 - INFO - New connection from 10.0.0.16
+2025-04-19 04:53:21,012 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:53:21,012 - WARNING - Invalid JSON from 10.0.0.16:64758
+2025-04-19 04:53:21,016 - INFO - Client 10.0.0.16:64758 disconnected
+2025-04-19 04:53:21,017 - INFO - Connection closed with 10.0.0.16:64758
+2025-04-19 04:54:55,013 - INFO - Handling client connection from 10.0.0.16:65158
+2025-04-19 04:54:55,013 - INFO - New connection from 10.0.0.16
+2025-04-19 04:54:55,013 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:54:55,014 - WARNING - Invalid JSON from 10.0.0.16:65158
+2025-04-19 04:54:55,017 - INFO - Client 10.0.0.16:65158 disconnected
+2025-04-19 04:54:55,019 - INFO - Connection closed with 10.0.0.16:65158
+2025-04-19 04:55:55,012 - INFO - Handling client connection from 10.0.0.16:65420
+2025-04-19 04:55:55,012 - INFO - New connection from 10.0.0.16
+2025-04-19 04:55:55,013 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:55:55,013 - WARNING - Invalid JSON from 10.0.0.16:65420
+2025-04-19 04:55:55,021 - INFO - Client 10.0.0.16:65420 disconnected
+2025-04-19 04:55:55,023 - INFO - Connection closed with 10.0.0.16:65420
+2025-04-19 04:56:55,019 - INFO - Handling client connection from 10.0.0.16:49318
+2025-04-19 04:56:55,019 - INFO - New connection from 10.0.0.16
+2025-04-19 04:56:55,020 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:56:55,020 - WARNING - Invalid JSON from 10.0.0.16:49318
+2025-04-19 04:56:55,024 - INFO - Client 10.0.0.16:49318 disconnected
+2025-04-19 04:56:55,025 - INFO - Connection closed with 10.0.0.16:49318
+2025-04-19 04:57:55,016 - INFO - Handling client connection from 10.0.0.16:49567
+2025-04-19 04:57:55,016 - INFO - New connection from 10.0.0.16
+2025-04-19 04:57:55,016 - WARNING - Invalid JSON from 10.0.0.16:49567
+2025-04-19 04:57:55,017 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:57:55,026 - INFO - Client 10.0.0.16:49567 disconnected
+2025-04-19 04:57:55,026 - INFO - Connection closed with 10.0.0.16:49567
+2025-04-19 04:58:55,024 - INFO - Handling client connection from 10.0.0.16:49815
+2025-04-19 04:58:55,025 - INFO - New connection from 10.0.0.16
+2025-04-19 04:58:55,045 - WARNING - Invalid JSON from 10.0.0.16:49815
+2025-04-19 04:58:55,046 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:58:55,056 - INFO - Client 10.0.0.16:49815 disconnected
+2025-04-19 04:58:55,058 - INFO - Connection closed with 10.0.0.16:49815
+2025-04-19 04:59:55,019 - INFO - Handling client connection from 10.0.0.16:50107
+2025-04-19 04:59:55,019 - INFO - New connection from 10.0.0.16
+2025-04-19 04:59:55,020 - WARNING - Invalid JSON from 10.0.0.16:50107
+2025-04-19 04:59:55,020 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 04:59:55,025 - INFO - Client 10.0.0.16:50107 disconnected
+2025-04-19 04:59:55,027 - INFO - Connection closed with 10.0.0.16:50107
+2025-04-19 05:09:39,644 - INFO - Handling client connection from 10.0.0.16:52604
+2025-04-19 05:09:39,645 - INFO - New connection from 10.0.0.16
+2025-04-19 05:09:39,645 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:09:39,649 - WARNING - Invalid JSON from 10.0.0.16:52604
+2025-04-19 05:09:39,650 - INFO - Client 10.0.0.16:52604 disconnected
+2025-04-19 05:09:39,651 - INFO - Connection closed with 10.0.0.16:52604
+2025-04-19 05:10:55,011 - INFO - Handling client connection from 10.0.0.16:52918
+2025-04-19 05:10:55,012 - INFO - New connection from 10.0.0.16
+2025-04-19 05:10:55,012 - WARNING - Invalid JSON from 10.0.0.16:52918
+2025-04-19 05:10:55,012 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:10:55,016 - INFO - Client 10.0.0.16:52918 disconnected
+2025-04-19 05:10:55,017 - INFO - Connection closed with 10.0.0.16:52918
+2025-04-19 05:11:55,018 - INFO - Handling client connection from 10.0.0.16:53183
+2025-04-19 05:11:55,018 - INFO - New connection from 10.0.0.16
+2025-04-19 05:11:55,019 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:11:55,019 - WARNING - Invalid JSON from 10.0.0.16:53183
+2025-04-19 05:11:55,023 - INFO - Client 10.0.0.16:53183 disconnected
+2025-04-19 05:11:55,071 - INFO - Connection closed with 10.0.0.16:53183
+2025-04-19 05:12:55,016 - INFO - Handling client connection from 10.0.0.16:53464
+2025-04-19 05:12:55,016 - INFO - New connection from 10.0.0.16
+2025-04-19 05:12:55,017 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:12:55,017 - WARNING - Invalid JSON from 10.0.0.16:53464
+2025-04-19 05:12:55,022 - INFO - Client 10.0.0.16:53464 disconnected
+2025-04-19 05:12:55,023 - INFO - Connection closed with 10.0.0.16:53464
+2025-04-19 05:13:41,656 - INFO - Handling client connection from 10.0.0.16:53668
+2025-04-19 05:13:41,656 - INFO - New connection from 10.0.0.16
+2025-04-19 05:13:41,656 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:13:41,656 - WARNING - Invalid JSON from 10.0.0.16:53668
+2025-04-19 05:13:41,660 - INFO - Client 10.0.0.16:53668 disconnected
+2025-04-19 05:13:41,661 - INFO - Connection closed with 10.0.0.16:53668
+2025-04-19 05:14:41,660 - INFO - Handling client connection from 10.0.0.16:53927
+2025-04-19 05:14:41,661 - INFO - New connection from 10.0.0.16
+2025-04-19 05:14:41,661 - WARNING - Invalid JSON from 10.0.0.16:53927
+2025-04-19 05:14:41,661 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:14:41,665 - INFO - Client 10.0.0.16:53927 disconnected
+2025-04-19 05:14:41,667 - INFO - Connection closed with 10.0.0.16:53927
+2025-04-19 05:15:41,670 - INFO - Handling client connection from 10.0.0.16:54192
+2025-04-19 05:15:41,670 - INFO - New connection from 10.0.0.16
+2025-04-19 05:15:41,671 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:15:41,672 - WARNING - Invalid JSON from 10.0.0.16:54192
+2025-04-19 05:15:41,694 - INFO - Client 10.0.0.16:54192 disconnected
+2025-04-19 05:15:41,696 - INFO - Connection closed with 10.0.0.16:54192
+2025-04-19 05:17:03,967 - INFO - Handling client connection from 10.0.0.16:54456
+2025-04-19 05:17:03,967 - INFO - New connection from 10.0.0.16
+2025-04-19 05:17:03,968 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 05:17:03,968 - WARNING - Invalid JSON from 10.0.0.16:54456
+2025-04-19 05:17:03,972 - INFO - Client 10.0.0.16:54456 disconnected
+2025-04-19 05:17:03,972 - INFO - Connection closed with 10.0.0.16:54456
+2025-04-19 17:55:30,222 - INFO - Handling client connection from 10.0.0.16:51410
+2025-04-19 17:55:30,226 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:30,227 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:30,230 - WARNING - Invalid JSON from 10.0.0.16:51410
+2025-04-19 17:55:30,239 - INFO - Client 10.0.0.16:51410 disconnected
+2025-04-19 17:55:30,240 - INFO - Connection closed with 10.0.0.16:51410
+2025-04-19 17:55:30,774 - INFO - Handling client connection from 10.0.0.16:51411
+2025-04-19 17:55:30,775 - WARNING - Invalid JSON from 10.0.0.16:51411
+2025-04-19 17:55:30,775 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:30,775 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:30,777 - INFO - Client 10.0.0.16:51411 disconnected
+2025-04-19 17:55:30,779 - INFO - Connection closed with 10.0.0.16:51411
+2025-04-19 17:55:37,541 - INFO - Handling client connection from 10.0.0.16:51440
+2025-04-19 17:55:37,541 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:37,542 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:37,542 - WARNING - Invalid JSON from 10.0.0.16:51440
+2025-04-19 17:55:37,545 - INFO - Client 10.0.0.16:51440 disconnected
+2025-04-19 17:55:37,546 - INFO - Connection closed with 10.0.0.16:51440
+2025-04-19 17:55:37,858 - INFO - Handling client connection from 10.0.0.16:51441
+2025-04-19 17:55:37,858 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:37,858 - WARNING - Invalid JSON from 10.0.0.16:51441
+2025-04-19 17:55:37,859 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:37,863 - INFO - Client 10.0.0.16:51441 disconnected
+2025-04-19 17:55:37,865 - INFO - Connection closed with 10.0.0.16:51441
+2025-04-19 17:55:41,961 - INFO - Handling client connection from 10.0.0.16:51458
+2025-04-19 17:55:41,961 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:41,962 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:41,962 - WARNING - Invalid JSON from 10.0.0.16:51458
+2025-04-19 17:55:41,965 - INFO - Client 10.0.0.16:51458 disconnected
+2025-04-19 17:55:41,966 - INFO - Connection closed with 10.0.0.16:51458
+2025-04-19 17:55:55,345 - INFO - Handling client connection from 10.0.0.16:51515
+2025-04-19 17:55:55,345 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:55,345 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:55,346 - WARNING - Invalid JSON from 10.0.0.16:51515
+2025-04-19 17:55:55,349 - INFO - Client 10.0.0.16:51515 disconnected
+2025-04-19 17:55:55,350 - INFO - Connection closed with 10.0.0.16:51515
+2025-04-19 17:55:57,097 - INFO - Handling client connection from 10.0.0.16:51520
+2025-04-19 17:55:57,098 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:57,098 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:57,098 - WARNING - Invalid JSON from 10.0.0.16:51520
+2025-04-19 17:55:57,101 - INFO - Client 10.0.0.16:51520 disconnected
+2025-04-19 17:55:57,102 - INFO - Connection closed with 10.0.0.16:51520
+2025-04-19 17:55:57,883 - INFO - Handling client connection from 10.0.0.16:51525
+2025-04-19 17:55:57,883 - INFO - New connection from 10.0.0.16
+2025-04-19 17:55:57,883 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:55:57,886 - WARNING - Invalid JSON from 10.0.0.16:51525
+2025-04-19 17:55:57,887 - INFO - Client 10.0.0.16:51525 disconnected
+2025-04-19 17:55:57,888 - INFO - Connection closed with 10.0.0.16:51525
+2025-04-19 17:56:00,536 - INFO - Handling client connection from 10.0.0.16:51538
+2025-04-19 17:56:00,536 - INFO - New connection from 10.0.0.16
+2025-04-19 17:56:00,536 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:56:00,536 - WARNING - Invalid JSON from 10.0.0.16:51538
+2025-04-19 17:56:00,540 - INFO - Client 10.0.0.16:51538 disconnected
+2025-04-19 17:56:00,541 - INFO - Connection closed with 10.0.0.16:51538
+2025-04-19 17:56:01,301 - INFO - Handling client connection from 10.0.0.16:51543
+2025-04-19 17:56:01,301 - INFO - New connection from 10.0.0.16
+2025-04-19 17:56:01,302 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:56:01,302 - WARNING - Invalid JSON from 10.0.0.16:51543
+2025-04-19 17:56:01,305 - INFO - Client 10.0.0.16:51543 disconnected
+2025-04-19 17:56:01,305 - INFO - Connection closed with 10.0.0.16:51543
+2025-04-19 17:56:41,455 - INFO - Handling client connection from 10.0.0.16:51724
+2025-04-19 17:56:41,455 - INFO - New connection from 10.0.0.16
+2025-04-19 17:56:41,456 - WARNING - Invalid JSON from 10.0.0.16:51724
+2025-04-19 17:56:41,456 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:56:41,459 - INFO - Client 10.0.0.16:51724 disconnected
+2025-04-19 17:56:41,460 - INFO - Connection closed with 10.0.0.16:51724
+2025-04-19 17:56:42,075 - INFO - Handling client connection from 10.0.0.16:51725
+2025-04-19 17:56:42,076 - INFO - New connection from 10.0.0.16
+2025-04-19 17:56:42,076 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:56:42,079 - WARNING - Invalid JSON from 10.0.0.16:51725
+2025-04-19 17:56:42,080 - INFO - Client 10.0.0.16:51725 disconnected
+2025-04-19 17:56:42,080 - INFO - Connection closed with 10.0.0.16:51725
+2025-04-19 17:56:42,649 - INFO - Handling client connection from 10.0.0.16:51730
+2025-04-19 17:56:42,650 - INFO - New connection from 10.0.0.16
+2025-04-19 17:56:42,650 - WARNING - Invalid JSON from 10.0.0.16:51730
+2025-04-19 17:56:42,650 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 17:56:42,653 - INFO - Client 10.0.0.16:51730 disconnected
+2025-04-19 17:56:42,654 - INFO - Connection closed with 10.0.0.16:51730
+2025-04-19 18:08:03,244 - INFO - Handling client connection from 10.0.0.16:53437
+2025-04-19 18:08:03,245 - INFO - New connection from 10.0.0.16
+2025-04-19 18:08:03,246 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:08:03,250 - WARNING - Invalid JSON from 10.0.0.16:53437
+2025-04-19 18:08:03,251 - INFO - Client 10.0.0.16:53437 disconnected
+2025-04-19 18:08:03,252 - INFO - Connection closed with 10.0.0.16:53437
+2025-04-19 18:08:50,117 - INFO - Handling client connection from 10.0.0.16:53651
+2025-04-19 18:08:50,117 - INFO - New connection from 10.0.0.16
+2025-04-19 18:08:50,118 - WARNING - Invalid JSON from 10.0.0.16:53651
+2025-04-19 18:08:50,118 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:08:50,121 - INFO - Client 10.0.0.16:53651 disconnected
+2025-04-19 18:08:50,121 - INFO - Connection closed with 10.0.0.16:53651
+2025-04-19 18:12:35,108 - INFO - Handling client connection from 10.0.0.16:54742
+2025-04-19 18:12:35,108 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:35,109 - WARNING - Invalid JSON from 10.0.0.16:54742
+2025-04-19 18:12:35,109 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:35,112 - INFO - Client 10.0.0.16:54742 disconnected
+2025-04-19 18:12:35,113 - INFO - Connection closed with 10.0.0.16:54742
+2025-04-19 18:12:43,464 - INFO - Handling client connection from 10.0.0.16:54796
+2025-04-19 18:12:43,464 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:43,464 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:43,464 - WARNING - Invalid JSON from 10.0.0.16:54796
+2025-04-19 18:12:43,467 - INFO - Client 10.0.0.16:54796 disconnected
+2025-04-19 18:12:43,468 - INFO - Connection closed with 10.0.0.16:54796
+2025-04-19 18:12:55,114 - INFO - Handling client connection from 10.0.0.16:54846
+2025-04-19 18:12:55,114 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:55,115 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:55,118 - WARNING - Invalid JSON from 10.0.0.16:54846
+2025-04-19 18:12:55,119 - INFO - Client 10.0.0.16:54846 disconnected
+2025-04-19 18:12:55,119 - INFO - Connection closed with 10.0.0.16:54846
+2025-04-19 18:12:56,124 - INFO - Handling client connection from 10.0.0.16:54851
+2025-04-19 18:12:56,124 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:56,124 - WARNING - Invalid JSON from 10.0.0.16:54851
+2025-04-19 18:12:56,124 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:56,127 - INFO - Client 10.0.0.16:54851 disconnected
+2025-04-19 18:12:56,128 - INFO - Connection closed with 10.0.0.16:54851
+2025-04-19 18:12:57,143 - INFO - Handling client connection from 10.0.0.16:54856
+2025-04-19 18:12:57,143 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:57,144 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:57,144 - WARNING - Invalid JSON from 10.0.0.16:54856
+2025-04-19 18:12:57,147 - INFO - Client 10.0.0.16:54856 disconnected
+2025-04-19 18:12:57,147 - INFO - Connection closed with 10.0.0.16:54856
+2025-04-19 18:12:58,147 - INFO - Handling client connection from 10.0.0.16:54861
+2025-04-19 18:12:58,147 - WARNING - Invalid JSON from 10.0.0.16:54861
+2025-04-19 18:12:58,148 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:58,148 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:58,150 - INFO - Client 10.0.0.16:54861 disconnected
+2025-04-19 18:12:58,151 - INFO - Connection closed with 10.0.0.16:54861
+2025-04-19 18:12:59,775 - INFO - Handling client connection from 10.0.0.16:54870
+2025-04-19 18:12:59,776 - WARNING - Invalid JSON from 10.0.0.16:54870
+2025-04-19 18:12:59,776 - INFO - New connection from 10.0.0.16
+2025-04-19 18:12:59,776 - INFO - Client 10.0.0.16:54870 disconnected
+2025-04-19 18:12:59,776 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:12:59,779 - INFO - Connection closed with 10.0.0.16:54870
+2025-04-19 18:13:00,831 - INFO - Handling client connection from 10.0.0.16:54875
+2025-04-19 18:13:00,831 - INFO - New connection from 10.0.0.16
+2025-04-19 18:13:00,831 - WARNING - Invalid JSON from 10.0.0.16:54875
+2025-04-19 18:13:00,832 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:13:00,835 - INFO - Client 10.0.0.16:54875 disconnected
+2025-04-19 18:13:00,835 - INFO - Connection closed with 10.0.0.16:54875
+2025-04-19 18:14:51,800 - INFO - Handling client connection from 10.0.0.16:55343
+2025-04-19 18:14:51,800 - INFO - New connection from 10.0.0.16
+2025-04-19 18:14:51,801 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:14:51,801 - WARNING - Invalid JSON from 10.0.0.16:55343
+2025-04-19 18:14:51,804 - INFO - Client 10.0.0.16:55343 disconnected
+2025-04-19 18:14:51,805 - INFO - Connection closed with 10.0.0.16:55343
+2025-04-19 18:14:52,625 - INFO - Handling client connection from 10.0.0.16:55348
+2025-04-19 18:14:52,625 - INFO - New connection from 10.0.0.16
+2025-04-19 18:14:52,626 - WARNING - Invalid JSON from 10.0.0.16:55348
+2025-04-19 18:14:52,626 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:14:52,628 - INFO - Client 10.0.0.16:55348 disconnected
+2025-04-19 18:14:52,629 - INFO - Connection closed with 10.0.0.16:55348
+2025-04-19 18:14:53,546 - INFO - Handling client connection from 10.0.0.16:55353
+2025-04-19 18:14:53,546 - INFO - New connection from 10.0.0.16
+2025-04-19 18:14:53,546 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:14:53,547 - WARNING - Invalid JSON from 10.0.0.16:55353
+2025-04-19 18:14:53,550 - INFO - Client 10.0.0.16:55353 disconnected
+2025-04-19 18:14:53,551 - INFO - Connection closed with 10.0.0.16:55353
+2025-04-19 18:14:54,200 - INFO - Handling client connection from 10.0.0.16:55358
+2025-04-19 18:14:54,200 - INFO - New connection from 10.0.0.16
+2025-04-19 18:14:54,200 - WARNING - Invalid JSON from 10.0.0.16:55358
+2025-04-19 18:14:54,201 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:14:54,204 - INFO - Client 10.0.0.16:55358 disconnected
+2025-04-19 18:14:54,204 - INFO - Connection closed with 10.0.0.16:55358
+2025-04-19 18:14:55,297 - INFO - Handling client connection from 10.0.0.16:55363
+2025-04-19 18:14:55,297 - INFO - New connection from 10.0.0.16
+2025-04-19 18:14:55,297 - WARNING - Invalid JSON from 10.0.0.16:55363
+2025-04-19 18:14:55,298 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:14:55,302 - INFO - Client 10.0.0.16:55363 disconnected
+2025-04-19 18:14:55,302 - INFO - Connection closed with 10.0.0.16:55363
+2025-04-19 18:14:55,993 - INFO - Handling client connection from 10.0.0.16:55368
+2025-04-19 18:14:55,993 - INFO - New connection from 10.0.0.16
+2025-04-19 18:14:55,994 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 18:14:55,994 - WARNING - Invalid JSON from 10.0.0.16:55368
+2025-04-19 18:14:55,998 - INFO - Client 10.0.0.16:55368 disconnected
+2025-04-19 18:14:55,999 - INFO - Connection closed with 10.0.0.16:55368
+2025-04-19 19:46:18,119 - INFO - Server stopped
+2025-04-19 19:46:18,122 - INFO - Notification: Server Stopped - Server has been stopped
+2025-04-19 19:46:18,927 - INFO - Server stopped
+2025-04-19 19:46:20,595 - INFO - Server started on 10.0.0.16:7777
+2025-04-19 19:46:20,595 - INFO - Server listening on 10.0.0.16:7777
+2025-04-19 19:46:20,595 - INFO - Notification: Server Started - Listening on 10.0.0.16:7777
+2025-04-19 20:25:21,118 - INFO - WakeMATECompanion initializing...
+2025-04-19 20:25:21,119 - INFO - Local IP: 10.0.0.16
+2025-04-19 20:25:21,119 - INFO - Server started on 10.0.0.16:7777
+2025-04-19 20:25:21,119 - INFO - Server listening on 10.0.0.16:7777
+2025-04-19 20:25:21,227 - INFO - Starting system tray icon
+2025-04-19 21:21:10,973 - INFO - Handling client connection from 10.0.0.16:59289
+2025-04-19 21:21:11,020 - INFO - New connection from 10.0.0.16
+2025-04-19 21:21:11,027 - WARNING - Invalid JSON from 10.0.0.16:59289
+2025-04-19 21:21:11,028 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 21:21:11,118 - INFO - Client 10.0.0.16:59289 disconnected
+2025-04-19 21:21:11,119 - INFO - Connection closed with 10.0.0.16:59289
+2025-04-19 21:21:11,721 - INFO - Handling client connection from 10.0.0.16:59290
+2025-04-19 21:21:11,721 - INFO - New connection from 10.0.0.16
+2025-04-19 21:21:11,722 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 21:21:11,724 - WARNING - Invalid JSON from 10.0.0.16:59290
+2025-04-19 21:21:11,726 - INFO - Client 10.0.0.16:59290 disconnected
+2025-04-19 21:21:11,767 - INFO - Connection closed with 10.0.0.16:59290
+2025-04-19 21:21:12,120 - INFO - Handling client connection from 10.0.0.16:59291
+2025-04-19 21:21:12,120 - INFO - New connection from 10.0.0.16
+2025-04-19 21:21:12,120 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 21:21:12,123 - WARNING - Invalid JSON from 10.0.0.16:59291
+2025-04-19 21:21:12,124 - INFO - Client 10.0.0.16:59291 disconnected
+2025-04-19 21:21:12,125 - INFO - Connection closed with 10.0.0.16:59291
+2025-04-19 21:21:12,669 - INFO - Handling client connection from 10.0.0.16:59292
+2025-04-19 21:21:12,669 - INFO - New connection from 10.0.0.16
+2025-04-19 21:21:12,670 - INFO - Notification: New Connection - Device at 10.0.0.16 connected
+2025-04-19 21:21:12,670 - WARNING - Invalid JSON from 10.0.0.16:59292
+2025-04-19 21:21:12,673 - INFO - Client 10.0.0.16:59292 disconnected
+2025-04-19 21:21:12,675 - INFO - Connection closed with 10.0.0.16:59292
