@@ -1,0 +1,6 @@
+2025-05-29 17:57:01,973 - INFO - WakeMATECompanion initializing...
+2025-05-29 17:57:01,973 - INFO - Running on Darwin Darwin Kernel Version 24.4.0: Wed Mar 19 21:16:31 PDT 2025; root:xnu-11417.101.15~1/RELEASE_X86_64
+2025-05-29 17:57:01,973 - INFO - Local IP: 10.0.0.16
+2025-05-29 17:57:01,974 - INFO - Server started on 10.0.0.16:7777
+2025-05-29 17:57:01,974 - INFO - Server listening on 10.0.0.16:7777
+2025-05-29 17:57:02,085 - INFO - Starting system tray icon

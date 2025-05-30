@@ -10,7 +10,8 @@ import pystray
 from pystray import MenuItem as item
 
 from . import qr_generator
-from . import network_utils
+from .utils import network_utils
+from ..native.notifications import show_notification
 
 logger = logging.getLogger("WakeMATECompanion")
 
@@ -28,10 +29,10 @@ class WakeMateTray:
         
         # Application paths
         self.app_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.icon_path = os.path.join(self.app_path, "resources", "icon.png")
+        self.icon_path = os.path.join(self.app_path, "resources", "MenuBAr_ICON.png")
         
         # Create resources directory if it doesn't exist
-        os.makedirs(os.path.join(self.app_path, "resources"), exist_ok=True)
+        os.makedirs(os.path.join(self.app_path, "resources", "icons"), exist_ok=True)
         
         # Create default icon if it doesn't exist
         self.create_default_icon()
@@ -61,7 +62,7 @@ class WakeMateTray:
             def server_status(item):
                 return f"Server: {'Online' if self.server.running else 'Offline'}"
             
-            # Create streamlined menu focused on server status and QR code generation
+            # Create menu
             menu = (
                 item(server_status, lambda: None, enabled=False),
                 item('Toggle Server', self.toggle_server),
@@ -118,11 +119,19 @@ class WakeMateTray:
     def show_notification(self, title, message):
         """Show a system notification"""
         logger.info(f"Notification: {title} - {message}")
-        if self.icon:
-            try:
-                self.icon.notify(message, title)
-            except Exception as e:
-                logger.error(f"Failed to show notification: {str(e)}")
+        
+        try:
+            # Use our new native notification system
+            show_notification(title, message, self.icon_path)
+        except Exception as e:
+            logger.error(f"Failed to show notification: {str(e)}")
+            
+            # Fallback to pystray notification if available
+            if self.icon:
+                try:
+                    self.icon.notify(message, title)
+                except Exception as e2:
+                    logger.error(f"Failed to show pystray notification: {str(e2)}")
     
     def run(self):
         """Run the system tray"""

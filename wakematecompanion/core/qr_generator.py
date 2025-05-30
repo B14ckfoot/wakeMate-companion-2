@@ -7,6 +7,7 @@ import json
 import platform
 import subprocess
 import logging
+from pathlib import Path
 
 logger = logging.getLogger("WakeMATECompanion")
 

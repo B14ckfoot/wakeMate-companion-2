@@ -1,0 +1,13 @@
+2025-05-29 17:55:41,916 - INFO - WakeMATECompanion initializing...
+2025-05-29 17:55:41,916 - INFO - Running on Darwin Darwin Kernel Version 24.4.0: Wed Mar 19 21:16:31 PDT 2025; root:xnu-11417.101.15~1/RELEASE_X86_64
+2025-05-29 17:55:41,916 - INFO - Local IP: 10.0.0.16
+2025-05-29 17:55:41,916 - INFO - Server started on 10.0.0.16:7777
+2025-05-29 17:55:41,917 - INFO - Server listening on 10.0.0.16:7777
+2025-05-29 17:55:41,928 - INFO - Created default icon at /Users/soundmanipulator/WakeMATE Project/wakeMate-companion-2/wakematecompanion/resources/MenuBAr_ICON.png
+2025-05-29 17:55:42,028 - INFO - Starting system tray icon
+2025-05-29 17:56:29,678 - INFO - Exiting application
+2025-05-29 17:56:29,679 - INFO - Server stopped
+2025-05-29 17:56:29,679 - INFO - Notification: Server Stopped - Server has been stopped
+2025-05-29 17:56:29,955 - INFO - Server stopped
+2025-05-29 17:56:29,967 - INFO - macOS notification shown successfully using AppleScript
+2025-05-29 17:56:29,971 - INFO - Application exited

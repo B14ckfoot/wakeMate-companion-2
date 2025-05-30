@@ -5,17 +5,22 @@ Main entry point for WakeMATECompanion
 import sys
 import os
 import logging
+import platform
 
-from . import logging_config
-from . import network_utils
-from .server import WakeMateServer
-from .system_tray import WakeMateTray
+from .core.utils import logging_config
+from .core.utils import network_utils
+from .core.server import WakeMateServer
+from .core.system_tray import WakeMateTray
 
 def main():
     """Main entry point for the application"""
     try:
         # Setup logging
         logger = logging_config.setup_logging()
+        
+        # Log platform info
+        system = platform.system()
+        logger.info(f"Running on {system} {platform.version()}")
         
         # Get local IP
         server_ip = network_utils.get_local_ip()
