@@ -1,0 +1,11 @@
+2025-05-29 18:33:51,604 - INFO - WakeMATECompanion initializing...
+2025-05-29 18:33:51,604 - INFO - Running on Darwin Darwin Kernel Version 24.4.0: Wed Mar 19 21:16:31 PDT 2025; root:xnu-11417.101.15~1/RELEASE_X86_64
+2025-05-29 18:33:51,604 - INFO - Local IP: 10.0.0.16
+2025-05-29 18:33:51,605 - INFO - Server started on 10.0.0.16:7777
+2025-05-29 18:33:51,605 - INFO - Server listening on 10.0.0.16:7777
+2025-05-29 18:33:51,732 - INFO - Starting system tray icon
+2025-05-29 18:38:22,142 - INFO - Exiting application
+2025-05-29 18:38:22,143 - INFO - Server stopped
+2025-05-29 18:38:22,143 - INFO - Notification: Server Stopped - Server has been stopped
+2025-05-29 18:38:22,406 - INFO - macOS notification shown successfully using AppleScript
+2025-05-29 18:38:22,409 - INFO - Application exited

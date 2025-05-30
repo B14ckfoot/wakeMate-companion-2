@@ -29,7 +29,7 @@ class WakeMateTray:
         
         # Application paths
         self.app_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.icon_path = os.path.join(self.app_path, "resources", "MenuBAr_ICON.png")
+        self.icon_path = os.path.join(self.app_path, "resources", "icon.png")
         
         # Create resources directory if it doesn't exist
         os.makedirs(os.path.join(self.app_path, "resources", "icons"), exist_ok=True)
